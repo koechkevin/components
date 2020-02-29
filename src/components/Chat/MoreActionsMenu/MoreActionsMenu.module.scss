@@ -1,0 +1,79 @@
+@import '../../../styles/global';
+
+@mixin item {
+  &:hover {
+    color: $color-white;
+    background-color: $color-primary;
+  }
+
+  &:global(.ant-menu-item) {
+    margin-bottom: -5px;
+    font-size: 14px;
+
+    &:last-child {
+      margin-bottom: 4px;
+    }
+  }
+
+  &:global(.ant-menu-item-selected) {
+    color: $color-primary;
+    background-color: $color-white;
+  }
+}
+
+@mixin responsive-item {
+  &:hover {
+    background: $color-primary-light;
+    color: $color-primary;
+  }
+
+  &:global(.ant-menu-item-selected) {
+    color: $color-primary;
+    background: $color-primary-light !important;
+  }
+}
+
+.root {
+  margin: 5px 0;
+  border-radius: 5px;
+  background-color: $color-white;
+  border: 1px solid $color-gray-dark;
+
+  .item {
+    @include item;
+  }
+
+  .danger {
+    @include item;
+
+    &:global(.ant-menu-item-selected) {
+      color: $color-white;
+      background: $color-error !important;
+    }
+
+    &:global(.ant-menu-item) {
+      &:hover {
+        color: $color-white;
+        background-color: $color-error;
+      }
+    }
+  }
+}
+
+.responsive {
+  @include respond-to('sm') {
+    width: 50px;
+    position: absolute;
+    right: 0;
+
+    .root {
+      .item {
+        @include responsive-item;
+      }
+
+      .danger {
+        @include responsive-item;
+      }
+    }
+  }
+}

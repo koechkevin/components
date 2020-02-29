@@ -1,0 +1,63 @@
+@import "../../../styles/global";
+
+.root {
+  align-items: center;
+  top: -15px;
+  right: 25px;
+  background: $color-white;
+  border-radius: 4px;
+  border: 1px solid $color-border-gray;
+  z-index: 999;
+
+  &:global(.ant-row) {
+    display: inline-flex;
+    position: absolute;
+
+    @include respond-to('sm') {
+      display: flex;
+      position: static;
+    }
+  }
+
+  @include respond-to('sm') {
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+  }
+
+  >div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 28px;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      border-right: 1px solid $color-border-gray;
+    }
+
+    @include respond-to('sm') {
+      flex: 1;
+
+      &:last-child {
+        border-right-width: 0;
+      }
+    }
+
+    &:hover {
+      background: $color-hover-bg;
+    }
+  }
+
+  svg {
+    font-size: 15px;
+    color: $color-base-dark;
+  }
+}
+
+.select {
+  background: $color-hover-bg;
+}

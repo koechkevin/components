@@ -1,0 +1,62 @@
+@import '../../styles/global';
+
+.tabs {
+  :global {
+    .ant-tabs-bar {
+      border-bottom: none;
+    }
+
+    .ant-tabs-nav .ant-tabs-tab-active {
+      color: $color-primary !important;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 18px;
+    }
+
+    .ant-tabs-nav .ant-tabs-tab {
+      color: $color-base-dark-gray;
+      font-size: 12px;
+      font-weight: 600;
+      text-align: center;
+      line-height: 18px;
+    }
+
+    .ant-tabs-tab {
+      margin: 0px;
+      padding: 15px 21px;
+    }
+
+    .ant-tabs-nav {
+      color: $color-hex-gray-primary;
+      text-align: center;
+    }
+
+    .ant-tabs-ink-bar {
+      height: 2px;
+      background: $color-primary;
+    }
+
+    .ant-tabs-nav .ant-tabs-tab {
+      border-bottom: 3px solid transparent;
+
+      &:hover {
+        color: $color-base-dark-gray;
+        border-bottom: 3px solid $color-primary-light;
+      }
+    }
+
+    .ant-tabs-left-bar {
+      .ant-tabs-nav .ant-tabs-tab {
+        color: $color-base-dark-gray;
+        border-bottom: none !important;
+        border-right: 3px solid transparent !important;
+
+        &:hover {
+          color: $color-base-dark-gray;
+          border-bottom: none !important;
+          border-right: 3px solid $color-primary-light !important;
+        }
+      }
+    }
+  }
+}

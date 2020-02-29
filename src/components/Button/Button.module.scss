@@ -1,0 +1,200 @@
+@import '../../styles/global';
+
+.button {
+  &:global([ant-click-animating-without-extra-node]:after) {
+    animation: 0s;
+  }
+
+  @mixin commonDimensions {
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 0 16px;
+  }
+
+  &:global(.ant-btn) {
+    height: 40px;
+    border: none;
+    box-shadow: none;
+    color: $color-base-dark-gray;
+    @include commonDimensions();
+    background-color: $color-basic-light-gray;
+
+    &[disabled],
+    &[disabled]:hover {
+      color: rgba($color: $color-base-dark-gray, $alpha: 0.38);
+    }
+  }
+
+  &:global(.ant-btn-background-ghost) {
+    border: solid 1px $color-primary;
+  }
+
+  &:global(.ant-btn-primary) {
+    border-color: $color-primary;
+    background-color: $color-primary;
+    color: $color-white;
+    @include commonDimensions();
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: $color-primary-dark;
+      background-color: $color-primary-dark;
+    }
+
+    &[disabled],
+    &[disabled]:hover {
+      opacity: 0.38;
+      color: $color-white;
+      border-color: $color-primary;
+      background-color: $color-primary;
+    }
+  }
+
+  &:global(.ant-btn-background-ghost) {
+    @include commonDimensions();
+    color: $color-primary;
+    border-color: $color-primary;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-primary-dark;
+      border-color: $color-primary-dark;
+    }
+
+    &[disabled],
+    &[disabled]:hover {
+      opacity: 0.38;
+      color: $color-primary;
+      border-color: $color-primary;
+    }
+  }
+
+  &:global(.ant-btn-danger) {
+    @include commonDimensions();
+    color: $color-white;
+    border-color: $color-error-secondary;
+    background-color: $color-error-secondary;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: $color-error-hover-secondary;
+      background-color: $color-error-hover-secondary;
+    }
+
+    &[disabled],
+    &[disabled]:hover {
+      opacity: 0.38;
+      color: $color-white;
+      border-color: $color-error-secondary;
+      background-color: $color-error-secondary;
+    }
+  }
+
+  &:global(.ant-btn-danger.ant-btn-background-ghost) {
+    color: $color-error-secondary;
+    border-color: $color-error-secondary;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: $color-error-hover-secondary;
+      background-color: $color-error-hover-secondary;
+    }
+
+    &[disabled],
+    &[disabled]:hover {
+      opacity: 0.38;
+      color: $color-white;
+      border-color: $color-error-secondary;
+      background-color: $color-error-secondary;
+    }
+  }
+
+  &:global(.ant-btn-round) {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 15px;
+    border-radius: 40px;
+    border-color: $color-primary;
+    background-color: $color-primary;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: $color-primary-dark;
+      background-color: $color-primary-dark;
+    }
+
+    &:global(.ant-btn-sm) {
+      border-radius: 40px;
+    }
+  }
+
+  &:global(.ant-btn-link) {
+    font-weight: bold;
+    color: rgba($color: $color-base-dark, $alpha: 0.6);
+    background-color: unset;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-primary;
+      border-color: $color-primary;
+    }
+  }
+
+  &:global(.ant-btn-icon-only) {
+    border: none;
+    color: $color-primary;
+    font-weight: bold;
+    box-shadow: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $color-primary-light;
+    }
+
+    &[disabled],
+    &[disabled]:hover {
+      opacity: 0.38;
+      color: $color-primary;
+      background-color: transparent;
+    }
+  }
+
+  &:global(.ant-btn-round.ant-btn-lg),
+  &:global(.ant-btn-lg) {
+    height: 44px;
+  }
+
+  &:global(.ant-btn-sm) {
+    height: 32px;
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 0 12px;
+  }
+
+  &:global(.ant-btn-loading) {
+    &::before {
+      opacity: 0;
+    }
+  }
+}
+
+.loading {
+  &:global(.ant-btn) {
+    padding: 0 24px;
+  }
+
+  pointer-events: none;
+}
+
+:global .fa-spinner-third {
+  vertical-align: middle;
+}

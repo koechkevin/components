@@ -1,0 +1,25 @@
+@import '../../styles/_global.scss';
+
+$badgeHeight: 18px;
+
+.badge {
+  padding: 2px;
+  height: $badgeHeight;
+  line-height: 1;
+  font-size: 12px;
+  color: $color-white;
+  border-radius: $badgeHeight / 2;
+  background-color: $color-buttercup;
+
+  @include display-flex();
+  @include flex-center();
+}
+
+.title {
+  flex: 1;
+  @include ellipsis();
+}
+
+.msgCountBadge {
+  float: right;
+}

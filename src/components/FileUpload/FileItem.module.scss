@@ -1,0 +1,77 @@
+@import '../../styles/_global.scss';
+
+.fileItem {
+  min-width: 220px;
+  border-radius: 8px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  border: 8px solid $color-basic-light-gray;
+  background-color: $color-white;
+
+  .wrapper {
+    flex: 1 auto;
+    overflow: hidden;
+  }
+
+  :global {
+    .ant-row,
+    .ant-row-flex {
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+.file {
+  padding: 8px 16px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+
+  :global {
+    .ant-row,
+    .ant-row-flex {
+      @include ellipsis;
+      flex-wrap: nowrap;
+      overflow: hidden;
+    }
+  }
+
+  .statusIcon {
+    cursor: default;
+    margin-right: 16px;
+    color: $color-primary;
+
+    &.timesCircle {
+      color: $color-error-secondary;
+    }
+
+    &.exclamationTriangle {
+      color: $color-light-orange;
+    }
+  }
+
+  .filename {
+    flex: 1;
+    display: block;
+    color: $color-base-dark;
+    font-size: 16px;
+    line-height: 24px;
+    @include ellipsis;
+  }
+
+  .statusInfo {
+    font-size: 12px;
+    line-height: 18px;
+    text-align: left;
+    color: $color-base-dark-gray;
+  }
+
+  &.success {
+    svg {
+      color: $color-success;
+    }
+  }
+}
+
+.progress {
+  padding: 16px;
+}

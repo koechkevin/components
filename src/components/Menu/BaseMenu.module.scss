@@ -1,0 +1,134 @@
+@import '../../styles/_global.scss';
+
+.baseMenu {
+  border-right: 0;
+  min-width: 200px;
+  max-width: 575px;
+
+  .baseMenuTitle {
+    font-weight: bold;
+    font-size: 12px;
+
+    @include respond-to('xs-l') {
+      font-size: 16px;
+    }
+  }
+
+  &:global {
+    &.ant-menu-inline {
+      .ant-menu-item {
+        width: 100%;
+        height: 32px;
+        margin: 0;
+        font-size: 12px;
+        line-height: 32px;
+        color: $color-white;
+        padding-right: 8px;
+      }
+
+      @include respond-to('xs-l') {
+        &.ant-menu-inline {
+          .ant-menu-item {
+            font-size: 16px;
+            line-height: 48px;
+            height: 48px;
+          }
+        }
+      }
+
+      &.ant-menu.ant-menu-dark {
+        .ant-menu-item-active {
+          background-color: rgba($color: $color-base-dark, $alpha: 1);
+        }
+
+        .ant-menu-item-selected {
+          background-color: $color-primary;
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      .ant-menu-submenu {
+        .ant-menu-submenu-title {
+          height: 32px;
+          margin: 8px 0;
+          vertical-align: middle;
+          line-height: 32px;
+
+          @include respond-to('xs-l') {
+            height: 48px;
+            margin-top: 16px;
+            margin-bottom: 0;
+          }
+
+          .ant-menu-submenu-arrow::before,
+          .ant-menu-submenu-arrow::after {
+            width: 9px;
+          }
+        }
+      }
+
+      .ant-menu-submenu-inline {
+        > .ant-menu-submenu-title .ant-menu-submenu-arrow {
+          transform: translateY(2px);
+
+          &::before {
+            transform: rotate(-45deg) translateX(4px);
+          }
+
+          &::after {
+            transform: rotate(45deg) translateX(-4px);
+          }
+        }
+
+        &.ant-menu-submenu-open > .ant-menu-submenu-title .ant-menu-submenu-arrow {
+          transform: translateY(-2px);
+
+          &::before {
+            transform: rotate(45deg) translateX(4px);
+          }
+
+          &::after {
+            transform: rotate(-45deg) translateX(-4px);
+          }
+        }
+      }
+
+      .ant-menu-sub .ant-menu-item {
+        padding-left: 16px !important;
+      }
+    }
+
+    &.ant-menu-dark,
+    &.ant-menu-dark .ant-menu-inline.ant-menu-sub {
+      box-shadow: none;
+      background-color: rgba($color: $color-side-bar-dark, $alpha: 1);
+    }
+  }
+
+  :global {
+    .ant-badge-multiple-words {
+      padding: 0px;
+      border-radius: 4px;
+    }
+
+    @include respond-to('xs-l') {
+      .ant-menu-submenu-title {
+        font-size: 16px;
+        margin: 0;
+      }
+    }
+
+    .ant-badge-count {
+      background: $color-gray-darker;
+      font-weight: bold;
+      font-size: 12px;
+      height: 18px;
+      border-radius: 4px;
+      margin-left: -8px;
+      box-shadow: 0 0 0 0;
+    }
+  }
+}

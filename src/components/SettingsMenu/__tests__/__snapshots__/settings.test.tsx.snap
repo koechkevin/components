@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Settings Menu Test mounts without crashing 1`] = `
+<SettingsMenu
+  location={
+    Object {
+      "pathname": "",
+    }
+  }
+  routes={Array []}
+>
+  <div
+    className="settingsSidebar"
+  >
+    <div
+      className="items"
+    />
+  </div>
+</SettingsMenu>
+`;

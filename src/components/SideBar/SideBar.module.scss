@@ -1,0 +1,72 @@
+@import '../../styles/_global.scss';
+
+.sideBar {
+  height: 100%;
+  overflow: auto;
+  color: $color-white;
+
+  &:global {
+    &.ant-layout-sider-dark {
+      background-color: rgba($color: $color-side-bar-dark, $alpha: 1);
+
+      >.ant-layout-sider-children {
+        max-width: max-content;
+        min-width: 100%;
+      }
+    }
+  }
+}
+
+.sideHeader {
+  position: relative;
+  padding: 16px;
+  min-width: 200px;
+  margin-bottom: 16px;
+  background-color: $color-base-dark;
+
+  @include respond-to('xs-l') {
+    height: 72px;
+  }
+
+  &:global(.ant-row-flex) {
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
+
+  .profile {
+    @include display-flex();
+    @include align-items(center);
+    flex: 1 auto;
+    overflow: hidden;
+
+    :global(.ant-col) {
+      flex: 1 auto;
+      @include display-flex();
+      @include align-items(center);
+      overflow: hidden;
+
+      b {
+        display: inline-block;
+        max-width: 120px;
+        @include ellipsis();
+      }
+    }
+  }
+
+  .menuBtn {
+    color: $color-base-gray;
+  }
+
+  .closeBtn {
+    background-color: $color-base-darker;
+    color: $color-grey-lighter;
+  }
+
+  .caretDown {
+    color: $color-grey-lighter;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+}

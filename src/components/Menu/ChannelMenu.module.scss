@@ -1,0 +1,118 @@
+@import '../../styles/_global.scss';
+
+.channelMenu {
+  min-width: 200px;
+  max-width: 575px;
+  background-color: rgba($color: $color-side-bar-dark, $alpha: 1);
+
+  .title {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0 16px;
+    margin: 8px 0;
+    color: $color-white;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+
+    @include respond-to('xs-l') {
+      font-size: 16px;
+      margin-top: 16px;
+      margin-bottom: 0;
+      height: 48px;
+      line-height: 48px;
+    }
+
+    > .titleContent {
+      flex: 1 auto;
+      @include ellipsis;
+    }
+  }
+
+  ul.list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .menuItem {
+      position: relative;
+      display: flex;
+      height: 32px;
+      font-size: 12px;
+      line-height: 32px;
+      padding: 0 0 0 16px;
+      overflow: hidden;
+      color: $color-white;
+      transition: background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+      @include respond-to('xs-l') {
+        font-size: 16px;
+        height: 48px;
+        line-height: 48px;
+      }
+
+      .name {
+        @include ellipsis;
+        flex: 1 auto;
+        padding-right: 8px;
+      }
+
+      .iconName {
+        padding-right: 12px;
+      }
+
+      .removeButton {
+        font-weight: bolder;
+        display: none;
+        font-size: 16px;
+        color: $color-base-gray;
+        margin-right: 8px;
+
+        &:active,
+        &:hover {
+          display: inline-block;
+          color: $color-white;
+        }
+      }
+
+      &:hover {
+        background-color: rgba($color: $color-base-dark, $alpha: 1);
+
+        .removeButton {
+          display: block;
+        }
+      }
+
+      &:global(.active) {
+        background-color: $color-primary;
+      }
+    }
+  }
+
+  :global {
+    .ant-badge-multiple-words {
+      padding: 0px;
+      border-radius: 4px;
+    }
+
+    .ant-badge-count {
+      background: $color-gray-darker;
+      font-weight: bold;
+      font-size: 12px;
+      border-radius: 4px;
+      margin-top: 5px;
+      margin-right: 8px;
+      margin-left: -6px;
+      box-shadow: 0 0 0 0;
+
+      @include respond-to('xs-l') {
+        margin-top: 14px;
+      }
+    }
+  }
+
+  .msgCountBadge {
+    float: right;
+  }
+}

@@ -1,0 +1,18 @@
+@import '../../../styles/global';
+
+
+.label {
+  &:global(.ant-tag) {
+    float: left;
+    font-weight: normal;
+    border: none;
+    background: transparent;
+    padding: 0;
+  }
+
+  .bold {
+    font-weight: bold;
+    color: $color-base-dark;
+    padding-right: 5px;
+  }
+}

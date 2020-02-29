@@ -1,0 +1,17 @@
+@import '../../../styles/global';
+
+.divider {
+  padding: 0 32px;
+  font-size: 14px;
+  font-weight: 700;
+
+  &:global(.ant-divider-horizontal.ant-divider-with-text-center) {
+    margin: 8px 0;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  @include respond-to('sm') {
+    padding: 0;
+  }
+}

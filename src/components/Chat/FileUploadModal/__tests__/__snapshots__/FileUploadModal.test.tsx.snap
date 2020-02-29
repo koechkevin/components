@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for file upload modal should render the file upload modal without crushing 1`] = `ReactWrapper {}`;

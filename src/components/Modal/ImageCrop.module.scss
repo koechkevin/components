@@ -1,0 +1,46 @@
+@import '../../styles/global';
+
+.wrapper {
+  height: 285px;
+  position: relative;
+  background-color: rgba($color: $color-black, $alpha: 0.5);
+
+  .uploadWrap {
+    flex: 1 auto;
+    height: 100%;
+    padding: 0;
+    border-radius: 0;
+
+    .content {
+      height: 100%;
+    }
+  }
+
+  .button {
+    position: absolute;
+    top: 70%;
+    left: 5%;
+
+    .iconBtn {
+      cursor: pointer;
+      color: $color-white;
+    }
+  }
+}
+
+:global(.ReactCrop) {
+  min-width: 100%;
+}
+
+:global(.ReactCrop__crop-selection) {
+  outline: none;
+  pointer-events: none;
+}
+
+:global(.ReactCrop__image) {
+  cursor: move;
+  height: 285px;
+  min-width: 100%;
+  object-fit: cover;
+  position: relative;
+}

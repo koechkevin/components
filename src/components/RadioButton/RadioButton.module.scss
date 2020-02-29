@@ -1,0 +1,54 @@
+@import '../../styles/_global.scss';
+
+.radioButton {
+  :global(.ant-radio-wrapper) {
+    display: table;
+  }
+
+  :global(.ant-radio) {
+    display: table-cell;
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+
+    &:hover {
+      :global(.ant-radio-inner) {
+        border-color: $color-primary !important;
+      }
+    }
+  }
+
+  :global(span.ant-radio + *) {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  :global(.ant-radio.ant-radio-checked .ant-radio-inner) {
+    background-color: $color-primary;
+    border-color: $color-primary;
+
+    &:after {
+      background-color: $color-white;
+      transform: scale(0.8);
+    }
+  }
+
+  :global(.ant-radio-disabled) {
+    &:hover {
+      :global(.ant-radio-inner) {
+        border-color: $color-light-gray !important;
+      }
+    }
+  }
+
+  :global(.ant-radio-disabled.ant-radio-checked) {
+    cursor: default;
+
+    &:hover {
+      :global(.ant-radio-inner) {
+        border-color: transparent !important;
+      }
+    }
+  }
+}

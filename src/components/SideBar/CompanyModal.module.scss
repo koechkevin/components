@@ -1,0 +1,79 @@
+@import '../../styles/_global.scss';
+
+$badgeHeight: 18px;
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1111;
+  background-color: rgba($color: $color-black, $alpha: 0.6);
+}
+
+.companyModal {
+  position: absolute;
+  top: 48px;
+  left: 50%;
+  width: 312px;
+  border-radius: 12px;
+  transform: translateX(-50%);
+  background-color: $color-base-dark;
+}
+
+.listItem {
+  padding: 16px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $color-base-darker;
+  }
+
+  .avatar {
+    border-radius: 6px;
+    border: 3px solid $color-base-dark;
+    background-color: $color-dark-gray;
+    transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    > img {
+      border-radius: 6px;
+      border: 2px solid $color-base-dark;
+    }
+
+    :global {
+      .ant-avatar-string {
+        line-height: 34px !important;
+      }
+    }
+  }
+
+  &.active .avatar {
+    border-width: 2px;
+    border-color: $color-white;
+  }
+
+  .info {
+    flex: 1 auto;
+    margin-left: 16px;
+    margin-right: 16px;
+    overflow: hidden;
+    font-size: 16px;
+
+    :global(.ant-typography) {
+      color: $color-white;
+    }
+  }
+}
+
+.badge {
+  padding: 2px 5px;
+  line-height: 1;
+  font-size: 12px;
+  height: $badgeHeight;
+  color: $color-white;
+  border-radius: 2px;
+  background-color: $color-buttercup;
+
+  @include display-flex();
+  @include flex-center();
+}

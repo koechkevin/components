@@ -1,0 +1,50 @@
+@import '../../../styles/global';
+
+.deleteModal {
+  .content {
+    margin: 32px 0;
+    padding: 8px;
+    flex-wrap: nowrap;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid $color-gray-regular;
+
+    @include respond-to('xs-l-landscape') {
+      margin: 16px 0;
+    }
+
+    .creator {
+      display: inline-block;
+      height: 24px;
+      line-height: 24px;
+      font-weight: bold;
+      color: $color-base-dark;
+    }
+
+    .createdAt {
+      margin-left: 6px;
+      color: rgba($color: $color-base-dark, $alpha: 0.6);
+    }
+
+    .text {
+      margin-top: 8px;
+      overflow-y: auto;
+      word-break: break-word;
+      max-height: 350px;
+
+      @include respond-to('xs') {
+        max-height: 60px;
+      }
+
+      @include respond-to('sm') {
+        max-height: 180px;
+      }
+    }
+
+    .message {
+      padding-left: 16px;
+      flex: 1 auto;
+      overflow: hidden;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import '../../styles/global.scss';
+
+
+.label {
+  &:global(.ant-tag) {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    text-align: center;
+    border: none;
+    background: transparent;
+    margin-left: -7px;
+  }
+
+  .outerLabel {
+    margin-right: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    height: 22px;
+    line-height: 22px;
+    font-weight: normal;
+    color: $color-hex-gray-light;
+  }
+
+}
+
+
+.default {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $color-primary-light;
+  color: $color-primary;
+  font-weight: 600;
+  font-size: 12px;
+  border: none;
+}
+
+.avatar {
+  color: $color-avatar-orange;
+  background-color: $color-avatar-light;
+}

@@ -1,0 +1,51 @@
+@import '../../styles/_global.scss';
+
+$dark-color: #161616;
+
+.sideNav {
+  width: 64px;
+  min-height: 100vh;
+
+  &:global(.ant-layout-sider-dark) {
+    background-color: $dark-color;
+  }
+
+  :global(.ant-row) {
+    flex-direction: column;
+  }
+
+  :global(.ant-col) {
+    width: 100%;
+    text-align: center;
+  }
+
+  .avatar {
+    border: 2px solid $color-base-dark;
+    background-color: $color-base-dark;
+    transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    :global(.ant-avatar-string) {
+      line-height: 32px !important;
+    }
+
+    > img {
+      border-radius: 8px;
+      border: 2px solid $color-base-dark;
+    }
+
+    &:hover {
+      border-color: rgba($color: $color-white, $alpha: 0.5);
+    }
+  }
+
+  .active .avatar {
+    border-color: $color-white;
+  }
+}
+
+.menuItem {
+  display: block;
+  color: $color-white;
+  margin-top: 12px;
+  text-align: center;
+}

@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for chat divider should test for mounting of divider component 1`] = `ShallowWrapper {}`;

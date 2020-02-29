@@ -1,0 +1,28 @@
+@import '../../styles/_global.scss';
+
+.progress {
+  :global {
+    .ant-progress-inner {
+      background-color: $color-basic-light-gray;
+
+      .ant-progress-bg {
+        background-color: $color-primary;
+      }
+    }
+  }
+
+  &.square {
+    :global {
+
+      .ant-progress-inner {
+        border-radius: 0;
+      }
+
+      .ant-progress-success-bg,
+      .ant-progress-bg {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+}

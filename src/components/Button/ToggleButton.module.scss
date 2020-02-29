@@ -1,0 +1,35 @@
+@import '../../styles/global';
+
+.toggle {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+.toggleOn {
+  color: white;
+  background: $color-primary;
+
+  &:hover {
+    background-color: $color-primary-dark;
+  }
+}
+
+.toggleOff {
+  background-color: transparent;
+  color: $color-primary;
+
+  &:hover {
+    background-color: $color-primary-light;
+  }
+}
+
+.disabled {
+  color: #a8c4ed !important;
+  pointer-events: none !important;
+  cursor: none;
+}

@@ -1,0 +1,44 @@
+@import '../../styles/global';
+
+.icon {
+  position: absolute;
+  top: -6px;
+  color: $color-primary;
+}
+
+.picker {
+  font-weight: 600;
+  background-color: $color-white;
+  margin-top: 8px;
+  border: 1px solid transparent;
+  padding: 16px;
+  box-shadow: 0px 4px 12px 0px rgba($color: $color-black, $alpha: 0.08),
+    0px 0px 0px 1px rgba($color: $color-black, $alpha: 0.08);
+  border-radius: 8px;
+  display: inline-grid;
+  grid-template-columns: repeat(4, 46px);
+  grid-template-rows: repeat(3, 30px);
+  grid-gap: 18px;
+  color: $color-base-dark-gray;
+
+  .calendarMonth {
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    text-align: center;
+    vertical-align: middle;
+    @include display-flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      color: $color-primary;
+      background: $color-primary-light;
+    }
+
+    &.selected {
+      background: $color-primary;
+      color: $color-white;
+    }
+  }
+}

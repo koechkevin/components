@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for Hover menu component should mount hover menu component 1`] = `ReactWrapper {}`;

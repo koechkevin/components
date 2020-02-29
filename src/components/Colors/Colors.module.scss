@@ -1,0 +1,28 @@
+@import '../../styles/global';
+
+.colors {
+  padding: 24px;
+  background-color: $color-white;
+
+  :global {
+    .ant-col {
+      padding: 20px;
+
+      .ant-typography {
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.avatarColor {
+  margin-top: 32px;
+
+  :global(.ant-col) {
+    padding-bottom: 120px;
+
+    .ant-typography {
+      color: $color-white;
+    }
+  }
+}

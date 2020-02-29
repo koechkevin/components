@@ -1,0 +1,172 @@
+@import '../../../styles/global';
+
+.messageInput {
+  width: 100%;
+  position: relative;
+  background-color: $color-white;
+  min-height: 48px;
+
+  &:focus-within,
+  &:hover {
+    .mentions {
+      border-color: $color-primary;
+    }
+  }
+}
+
+.mentions {
+  flex-wrap: nowrap;
+  border-radius: 6px;
+  align-items: stretch;
+  border: 1px solid $color-gray-regular;
+  min-height: 48px;
+
+  :global(.ant-col) {
+    display: flex;
+    align-items: center;
+  }
+
+  .message {
+    flex: 1;
+    width: 100%;
+    padding-left: 10px;
+    border-width: 0;
+    outline: 0;
+    resize: none;
+    color: $color-base-dark;
+    vertical-align: middle;
+
+    @include respond-to('xs-l') {
+      font-size: 16px;
+    }
+  }
+}
+
+.addButton {
+  margin: 7px;
+  width: 32px;
+  height: 32px;
+  line-height: 1;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease-in;
+  @include flex-center;
+
+  &:hover {
+    color: $color-primary;
+    background-color: $color-primary-light;
+  }
+}
+
+.iconButton {
+  display: flex;
+  cursor: pointer;
+  box-sizing: border-box;
+  color: $color-base-gray-dark;
+
+  > svg {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.tipsWrapper {
+  font-size: 11px;
+  text-align: right;
+
+  .tipsContent {
+    padding: 4px 0;
+    margin-bottom: 0;
+
+    @include respond-to('md') {
+      display: none;
+    }
+  }
+
+  .tipsIcon {
+    padding: 4px 0;
+    display: none;
+    cursor: pointer;
+    color: $color-primary;
+
+    @include respond-to('md') {
+      display: inline-block;
+    }
+  }
+}
+
+.messageTips {
+  margin-bottom: 0;
+
+  @include ellipsis;
+
+  .tisContent span {
+    color: $color-primary;
+  }
+}
+
+.tooltip {
+  max-width: 420px;
+  font-size: 11px;
+
+  :global(.ant-tooltip-inner) {
+    padding: 15px 12px;
+    color: $color-base-dark-gray;
+    background-color: $color-white;
+  }
+
+  :global(.ant-tooltip-arrow) {
+    border-top-color: $color-white;
+  }
+}
+
+.suggestions {
+  position: absolute;
+  padding-top: 12px;
+  bottom: 55px;
+  z-index: 999;
+  margin-left: -30px;
+  margin-bottom: -9px;
+  border-radius: 4px;
+  background: $color-white;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.08);
+
+  @include respond-to('sm') {
+    bottom: 63px;
+  }
+
+  .matches {
+    padding: 4px 9px;
+    font-size: 10px;
+    background: #f5f5f5;
+    color: $color-base-dark-gray;
+
+    b {
+      margin-left: 4px;
+      color: $color-base-dark;
+    }
+  }
+}
+
+.upload {
+  display: flex;
+
+  :global {
+    .ant-upload {
+      width: 100%;
+      height: 100%;
+      color: $color-base-dark;
+
+      .ant-upload {
+        display: flex;
+        align-items: center;
+        padding: 8px 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`themed radio button renders checked button without crashing 1`] = `
+<ThemedRadio
+  checked={true}
+  label="Owner"
+  onSelect={[MockFunction]}
+  theme="blue"
+>
+  <RadioButton
+    checked={true}
+    className="radio blue"
+    label="Owner"
+    onSelect={[MockFunction]}
+    theme="blue"
+  >
+    <Radio
+      checked={true}
+      className="radio blue"
+      label="Owner"
+      onSelect={[MockFunction]}
+      theme="blue"
+    >
+      <Radio
+        checked={true}
+        className="radioButton radio blue"
+        label="Owner"
+        onSelect={[MockFunction]}
+        theme="blue"
+        type="radio"
+      >
+        <label
+          className="radioButton radio blue ant-radio-wrapper ant-radio-wrapper-checked"
+        >
+          <Checkbox
+            checked={true}
+            className=""
+            defaultChecked={false}
+            label="Owner"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onSelect={[MockFunction]}
+            prefixCls="ant-radio"
+            style={Object {}}
+            theme="blue"
+            type="radio"
+          >
+            <span
+              className="ant-radio ant-radio-checked"
+              style={Object {}}
+            >
+              <input
+                checked={true}
+                className="ant-radio-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                type="radio"
+              />
+              <span
+                className="ant-radio-inner"
+              />
+            </span>
+          </Checkbox>
+          <span>
+            <Text>
+              <Text
+                className="text "
+              >
+                <withConfigConsumer(Base)
+                  className="text "
+                  component="span"
+                  ellipsis={false}
+                >
+                  <Base
+                    className="text "
+                    component="span"
+                    ellipsis={false}
+                    getPrefixCls={[Function]}
+                    prefixCls="ant-typography"
+                    renderEmpty={[Function]}
+                  >
+                    <LocaleReceiver
+                      componentName="Text"
+                    >
+                      <ResizeObserver
+                        disabled={true}
+                        onResize={[Function]}
+                      >
+                        <Typography
+                          aria-label={null}
+                          className="text "
+                          component="span"
+                          style={
+                            Object {
+                              "WebkitLineClamp": null,
+                            }
+                          }
+                        >
+                          <span
+                            aria-label={null}
+                            className="ant-typography text "
+                            style={
+                              Object {
+                                "WebkitLineClamp": null,
+                              }
+                            }
+                          >
+                            Owner
+                          </span>
+                        </Typography>
+                      </ResizeObserver>
+                    </LocaleReceiver>
+                  </Base>
+                </withConfigConsumer(Base)>
+              </Text>
+            </Text>
+          </span>
+        </label>
+      </Radio>
+    </Radio>
+  </RadioButton>
+</ThemedRadio>
+`;

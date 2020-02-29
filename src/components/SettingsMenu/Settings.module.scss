@@ -1,0 +1,71 @@
+@import '../../styles/_global';
+
+.settingsSidebar {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  padding-top: 24px;
+  font-size: 12px;
+
+  a {
+    color: inherit;
+  }
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.logoAvatar {
+  margin-left: auto;
+}
+
+.companyName {
+  margin-top: 16px;
+  margin-bottom: 24px;
+  font-size: 18px;
+  color: $color-black-light;
+}
+
+.items {
+  overflow-y: auto;
+  -ms-overflow-style: none; /* IE 11 */
+  scrollbar-width: none; /* Firefox 64+ */
+  color: $color-base-dark;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.group {
+  margin-bottom: 16px;
+}
+
+.title {
+  font-weight: 600;
+  line-height: 24px;
+  padding: 8px 24px;
+}
+
+.link {
+  line-height: 18px;
+  padding: 11px 24px;
+  text-transform: capitalize;
+  color: $color-base-dark-gray;
+  font-weight: 600;
+}
+
+.menuItem {
+  border-right: 1.5px solid $color-gray-regular;
+  padding: 8px 0 0;
+  height: 48px;
+}
+
+.active {
+  color: $color-primary;
+  margin-right: -1.5px;
+  border-right: 2px solid $color-primary;
+}

@@ -1,0 +1,27 @@
+@import '../../styles/global';
+
+.switch {
+  &:global(.ant-switch) {
+    height: 14px;
+    width: 36px;
+    background: $color-grey-lighter;
+  }
+
+  &:global(.ant-switch-checked) {
+    background-color: $color-primary-light;
+  }
+
+  &:global(.ant-switch::after) {
+    background: $color-white;
+    width: 20px;
+    height: 20px;
+    margin-top: -6px;
+    margin-left: -2px;
+  }
+
+  &:global(.ant-switch-checked::after) {
+    background-color: $color-primary;
+    margin-left: 0px;
+    margin-right: -2px;
+  }
+}

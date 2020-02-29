@@ -1,0 +1,77 @@
+@import '../../styles/global';
+
+.titleIcon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu {
+  &:global(.ant-dropdown-menu),
+  &:global(.ant-menu-submenu-popup),
+  &:global(.ant-dropdown-menu-submenu-popup),
+  &:global(.ant-menu) {
+    padding: 0;
+    border: none;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px 0 rgba($color: $color-black, $alpha: 0.08),
+      0 0 0 1px rgba($color: $color-black, $alpha: 0.08);
+
+    a {
+      color: inherit;
+    }
+
+    :global(.ant-dropdown-menu-item),
+    :global(.ant-menu-item),
+    :global(.ant-dropdown-menu-submenu-title),
+    :global(.ant-menu-submenu-title) {
+      padding: 8px 16px;
+      height: 48px;
+      margin: 0;
+      line-height: 32px;
+      font-size: 16px;
+      color: $color-base-dark;
+
+      &:hover {
+        color: $color-base-dark;
+        background-color: $color-basic-light-gray;
+      }
+
+      .icon {
+        margin-right: 8px;
+      }
+
+      &.divide {
+        padding-bottom: 8px;
+        border-bottom: 1px solid $color-gray-regular;
+      }
+    }
+
+    &:global(.ant-menu-submenu-popup),
+    &:global(.ant-dropdown-menu-submenu-popup) {
+      :global(.ant-dropdown-menu),
+      :global(.ant-menu) {
+        padding: 0;
+        min-width: 240px;
+      }
+    }
+
+    &:global(.ant-dropdown-menu),
+    &:global(.ant-menu) {
+      padding: 8px 0;
+    }
+
+    div[aria-expanded='true'] {
+      color: $color-base-dark;
+      background-color: $color-basic-light-gray;
+    }
+
+    :global(.ant-menu-item-selected),
+    :global(.ant-dropdown-menu-item-selected) {
+      color: $color-base-dark;
+      background-color: transparent;
+    }
+  }
+}

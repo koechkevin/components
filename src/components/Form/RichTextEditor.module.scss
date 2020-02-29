@@ -1,0 +1,71 @@
+@import '../../styles/global';
+
+@mixin border-rounding {
+  border-radius: 8px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.richTextStyles {
+  :global(.rdw-option-wrapper) {
+    background: $color-basic-light-gray;
+    &:active {
+      box-shadow: none;
+    }
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    img {
+      opacity: 0.4;
+    }
+  }
+
+  :global(.rdw-option-active) {
+    box-shadow: none;
+  }
+
+  :global(.rdw-dropdown-selectedtext) {
+    background: $color-basic-light-gray;
+  }
+
+  :global(.rdw-link-modal) {
+    min-height: 228px;
+  }
+
+  :global(.DraftEditor-editorContainer) {
+    border-bottom: 1px solid $color-base-gray;
+    cursor: pointer;
+
+    &:hover {
+      @include border-rounding();
+      border-bottom: 1px solid $color-primary;
+    }
+
+    &:focus {
+      border-bottom: 2px solid $color-primary;
+    }
+  }
+
+  :global(.public-DraftStyleDefault-ltr) {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  :global(.rdw-editor-toolbar) {
+    border-radius: 0px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding-left: 8px;
+  }
+
+  :global(.rdw-option-active) {
+    img {
+      opacity: 2;
+    }
+  }
+}

@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for message editable item component should test for the mounting of the message editable component 1`] = `ReactWrapper {}`;

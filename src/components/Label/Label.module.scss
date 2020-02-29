@@ -1,0 +1,12 @@
+@import '../../styles/global.scss';
+
+.label {
+  @include flex-center-vertical;
+  height: 32px;
+  font-size: 12px;
+  margin-right: 8px;
+  font-weight: 600;
+  line-height: 18px;
+  color: $color-primary;
+  background-color: $color-primary-light;
+}

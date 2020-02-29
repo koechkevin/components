@@ -1,0 +1,105 @@
+@import '../../styles/global';
+
+.listItem {
+  padding: 16px 32px 16px 16px;
+  border-bottom: 1px solid $color-gray-regular;
+  min-width: 550px;
+  align-items: center;
+
+  &:hover {
+    background-color: $color-gray-light;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .name {
+    @include ellipsis;
+    font-weight: bold;
+  }
+
+  .checkbox {
+    margin-right: 16px;
+  }
+
+  .status {
+    vertical-align: baseline;
+    font-size: 7px;
+    margin: 8px 0 0 5px;
+    font-weight: bold;
+  }
+
+  .smallFont {
+    @include ellipsis;
+    font-size: 12px;
+  }
+
+  .userRole {
+    font-size: 11px;
+    background-color: $color-gray-regular;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    font-weight: bold;
+  }
+
+  .roles {
+    @include display-flex;
+    flex-wrap: wrap;
+
+    .company-admin,
+    .aurora-admin {
+      color: $color-primary;
+      background-color: $color-primary-light;
+    }
+
+    .company-billing {
+      color: $color-purple-radio;
+      background-color: $color-purple-radio-light;
+    }
+
+    .company-owner {
+      color: $color-gold-radio;
+      background-color: $color-gold-radio-light;
+    }
+
+    .company-recruiter {
+      color: $color-radio-green;
+      background-color: $color-radio-green-light;
+    }
+  }
+}
+
+.avatar {
+  background-color: $color-gray-regular;
+}
+
+.invited {
+  font-size: 12px;
+  background-color: $color-gray-regular;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.menu {
+  width: 268px;
+
+  :global {
+    .ant-dropdown-menu {
+      padding-top: 9px;
+      padding-bottom: 9px;
+    }
+
+    .ant-dropdown-menu-item {
+      padding-top: 9px;
+      padding-bottom: 9px;
+
+      &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+      }
+    }
+  }
+}

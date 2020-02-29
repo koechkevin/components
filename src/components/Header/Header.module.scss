@@ -1,0 +1,15 @@
+@import '../../styles/global';
+
+.header {
+  &:global(.ant-layout-header) {
+    width: 100%;
+    height: 64px;
+    line-height: 64px;
+    padding: 0 16px;
+    font-weight: bold;
+    background-color: $color-white;
+    border-bottom: 1px solid $color-black-lighter;
+    color: $color-base-dark;
+    font-size: 16px;
+  }
+}

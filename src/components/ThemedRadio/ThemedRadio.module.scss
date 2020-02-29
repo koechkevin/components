@@ -1,0 +1,95 @@
+@import '../../styles/_global.scss';
+
+.radio {
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+  padding: 8px;
+  background-color: $color-basic-light-gray;
+  margin-bottom: 8px;
+
+  &:global(.ant-radio-wrapper) {
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+
+  &.primary,
+  &.blue {
+    color: $color-primary;
+    background-color: $color-primary-light;
+    :global {
+      .ant-typography {
+        color: $color-primary;
+        background-color: $color-primary-light;
+      }
+      .ant-radio-inner {
+        background-color: $color-primary;
+        border-color: $color-primary;
+        &:after {
+          background-color: $color-white;
+          transform: scale(0.8);
+        }
+      }
+    }
+  }
+
+  &.green {
+    color: $color-radio-green;
+    background-color: $color-radio-green-light;
+    :global {
+      .ant-typography {
+        color: $color-radio-green;
+        background-color: $color-radio-green-light;
+      }
+
+      .ant-radio-inner {
+        background-color: $color-radio-green;
+        border-color: $color-radio-green;
+        &:after {
+          background-color: $color-white;
+          transform: scale(0.8);
+        }
+      }
+    }
+  }
+
+  &.gold {
+    color: $color-gold-radio;
+    background-color: $color-gold-radio-light;
+    :global {
+      .ant-typography {
+        color: $color-gold-radio;
+        background-color: $color-gold-radio-light;
+      }
+
+      .ant-radio-inner {
+        background-color: $color-gold-radio;
+        border-color: $color-gold-radio;
+        &:after {
+          background-color: $color-white;
+          transform: scale(0.8);
+        }
+      }
+    }
+  }
+
+  &.purple {
+    color: $color-purple-radio;
+    background-color: $color-purple-radio-light;
+    :global {
+      .ant-typography {
+        color: $color-purple-radio;
+        background-color: $color-purple-radio-light;
+      }
+
+      .ant-radio-inner {
+        background-color: $color-purple-radio;
+        border-color: $color-purple-radio;
+        &:after {
+          background-color: $color-white;
+          transform: scale(0.8);
+        }
+      }
+    }
+  }
+}

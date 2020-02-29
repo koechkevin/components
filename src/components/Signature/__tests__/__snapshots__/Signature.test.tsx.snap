@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component App component render with props without failing 1`] = `ShallowWrapper {}`;
+
+exports[`component App component render without props without failing 1`] = `ShallowWrapper {}`;

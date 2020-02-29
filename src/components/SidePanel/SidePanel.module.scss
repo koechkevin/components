@@ -1,0 +1,23 @@
+@import '../../styles/global';
+
+$height: 62px;
+
+.sidePanel {
+  position: absolute;
+  top: $height;
+
+  &:global(.ant-drawer-right.ant-drawer-open .ant-drawer-content-wrapper) {
+    box-shadow: -2px 3px 5px rgba(0, 0, 0, 0.06);
+  }
+}
+
+.closeBtn {
+  height: 24px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  line-height: 24px;
+  cursor: pointer;
+  color: $color-base-gray-dark;
+}

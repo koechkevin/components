@@ -1,0 +1,45 @@
+@import '../../styles/global';
+@import './FileItem.module';
+
+.container {
+  padding: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: $color-basic-light-gray;
+
+  .content {
+    border-radius: 4px;
+    text-align: center;
+    background-color: $color-white;
+
+    .title {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .uploadIcon {
+      color: $color-white;
+      margin-left: -8px;
+    }
+
+    :global {
+      .ant-upload.ant-upload-drag {
+        cursor: default;
+        // border-color: $color-white;
+        background-color: $color-white;
+
+        &:not(.ant-upload-disabled):hover {
+          border-color: $color-primary;
+        }
+      }
+    }
+  }
+}
+
+.fileWrapper {
+  @extend .file;
+  text-align: left;
+  padding: 16px;
+  border-radius: 4px 4px 0 0;
+  border-bottom: solid 1px $color-lighter-gray;
+}

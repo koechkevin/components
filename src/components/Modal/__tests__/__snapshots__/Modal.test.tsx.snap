@@ -1,0 +1,481 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal Footer Test should display the footer with a title "Ok Button" 1`] = `
+<Footer
+  okText="Ok Button"
+>
+  <Row
+    align="middle"
+    gutter={0}
+    justify="end"
+    type="flex"
+  >
+    <div
+      className="ant-row-flex ant-row-flex-end ant-row-flex-middle"
+      style={Object {}}
+    >
+      <Button
+        block={false}
+        type="link"
+      >
+        <Button
+          block={false}
+          className="button  "
+          ghost={false}
+          htmlType="button"
+          loading={false}
+          type="link"
+        >
+          <button
+            className="ant-btn button   ant-btn-link"
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              key=".0"
+            >
+              Cancel
+            </span>
+          </button>
+        </Button>
+      </Button>
+      <Button
+        block={false}
+        size="large"
+        type="primary"
+      >
+        <Button
+          block={false}
+          className="button  "
+          ghost={false}
+          htmlType="button"
+          loading={false}
+          size="large"
+          type="primary"
+        >
+          <Wave>
+            <button
+              className="ant-btn button   ant-btn-primary ant-btn-lg"
+              onClick={[Function]}
+              type="button"
+            >
+              <span
+                key=".0"
+              >
+                Ok Button
+              </span>
+            </button>
+          </Wave>
+        </Button>
+      </Button>
+    </div>
+  </Row>
+</Footer>
+`;
+
+exports[`Modal Footer Test should display the footer with cancel button text "Cancel Button" 1`] = `
+<Footer
+  cancelText="Cancel Button"
+>
+  <Row
+    align="middle"
+    gutter={0}
+    justify="end"
+    type="flex"
+  >
+    <div
+      className="ant-row-flex ant-row-flex-end ant-row-flex-middle"
+      style={Object {}}
+    >
+      <Button
+        block={false}
+        type="link"
+      >
+        <Button
+          block={false}
+          className="button  "
+          ghost={false}
+          htmlType="button"
+          loading={false}
+          type="link"
+        >
+          <button
+            className="ant-btn button   ant-btn-link"
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              key=".0"
+            >
+              Cancel Button
+            </span>
+          </button>
+        </Button>
+      </Button>
+      <Button
+        block={false}
+        size="large"
+        type="primary"
+      >
+        <Button
+          block={false}
+          className="button  "
+          ghost={false}
+          htmlType="button"
+          loading={false}
+          size="large"
+          type="primary"
+        >
+          <Wave>
+            <button
+              className="ant-btn button   ant-btn-primary ant-btn-lg"
+              onClick={[Function]}
+              type="button"
+            >
+              <span
+                key=".0"
+              >
+                Ok
+              </span>
+            </button>
+          </Wave>
+        </Button>
+      </Button>
+    </div>
+  </Row>
+</Footer>
+`;
+
+exports[`Modal Test should display the modal 1`] = `
+<Modal
+  centered={true}
+  className="modal "
+  closeIcon={
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      fixedWidth={false}
+      flip={null}
+      icon={
+        Object {
+          "icon": Array [
+            320,
+            512,
+            Array [],
+            "f00d",
+            "M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z",
+          ],
+          "iconName": "times",
+          "prefix": "far",
+        }
+      }
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size={null}
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+  }
+  confirmLoading={false}
+  footer={
+    <Footer
+      okButtonProps={
+        Object {
+          "loading": undefined,
+        }
+      }
+    />
+  }
+  mask={true}
+  maskTransitionName="fade"
+  okType="primary"
+  transitionName="zoom"
+  visible={true}
+  width={520}
+>
+  Modal Test
+</Modal>
+`;
+
+exports[`Modal Test should display the modal with footer "Test Modal Footer" 1`] = `
+<Modal
+  centered={true}
+  className="modal "
+  closeIcon={
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      fixedWidth={false}
+      flip={null}
+      icon={
+        Object {
+          "icon": Array [
+            320,
+            512,
+            Array [],
+            "f00d",
+            "M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z",
+          ],
+          "iconName": "times",
+          "prefix": "far",
+        }
+      }
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size={null}
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+  }
+  confirmLoading={false}
+  footer="Test Modal Footer"
+  mask={true}
+  maskTransitionName="fade"
+  okType="primary"
+  transitionName="zoom"
+  visible={true}
+  width={520}
+>
+  Modal Test
+</Modal>
+`;
+
+exports[`Modal Test should display the modal with title "Test Modal Title" 1`] = `
+<Modal
+  centered={true}
+  className="modal "
+  closeIcon={
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      fixedWidth={false}
+      flip={null}
+      icon={
+        Object {
+          "icon": Array [
+            320,
+            512,
+            Array [],
+            "f00d",
+            "M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z",
+          ],
+          "iconName": "times",
+          "prefix": "far",
+        }
+      }
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size={null}
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+  }
+  confirmLoading={false}
+  footer={
+    <Footer
+      okButtonProps={
+        Object {
+          "loading": undefined,
+        }
+      }
+    />
+  }
+  mask={true}
+  maskTransitionName="fade"
+  okType="primary"
+  title="Test Modal Title"
+  transitionName="zoom"
+  visible={true}
+  width={520}
+>
+  Modal Test
+</Modal>
+`;
+
+exports[`Modal Test should display the modal without footer 1`] = `
+<Modal
+  centered={true}
+  className="modal "
+  closeIcon={
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      fixedWidth={false}
+      flip={null}
+      icon={
+        Object {
+          "icon": Array [
+            320,
+            512,
+            Array [],
+            "f00d",
+            "M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z",
+          ],
+          "iconName": "times",
+          "prefix": "far",
+        }
+      }
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size={null}
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+  }
+  confirmLoading={false}
+  footer={null}
+  mask={true}
+  maskTransitionName="fade"
+  okType="primary"
+  transitionName="zoom"
+  visible={true}
+  width={520}
+>
+  Modal Test
+</Modal>
+`;
+
+exports[`Modal Test should display the modal without title 1`] = `
+<Modal
+  centered={true}
+  className="modal "
+  closeIcon={
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      fixedWidth={false}
+      flip={null}
+      icon={
+        Object {
+          "icon": Array [
+            320,
+            512,
+            Array [],
+            "f00d",
+            "M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z",
+          ],
+          "iconName": "times",
+          "prefix": "far",
+        }
+      }
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size={null}
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+  }
+  confirmLoading={false}
+  footer={
+    <Footer
+      okButtonProps={
+        Object {
+          "loading": undefined,
+        }
+      }
+    />
+  }
+  mask={true}
+  maskTransitionName="fade"
+  okType="primary"
+  title={null}
+  transitionName="zoom"
+  visible={true}
+  width={520}
+>
+  Modal Test
+</Modal>
+`;
+
+exports[`Modal Test should not display the modal 1`] = `
+<Modal
+  centered={true}
+  className="modal "
+  closeIcon={
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      fixedWidth={false}
+      flip={null}
+      icon={
+        Object {
+          "icon": Array [
+            320,
+            512,
+            Array [],
+            "f00d",
+            "M207.6 256l107.72-107.72c6.23-6.23 6.23-16.34 0-22.58l-25.03-25.03c-6.23-6.23-16.34-6.23-22.58 0L160 208.4 52.28 100.68c-6.23-6.23-16.34-6.23-22.58 0L4.68 125.7c-6.23 6.23-6.23 16.34 0 22.58L112.4 256 4.68 363.72c-6.23 6.23-6.23 16.34 0 22.58l25.03 25.03c6.23 6.23 16.34 6.23 22.58 0L160 303.6l107.72 107.72c6.23 6.23 16.34 6.23 22.58 0l25.03-25.03c6.23-6.23 6.23-16.34 0-22.58L207.6 256z",
+          ],
+          "iconName": "times",
+          "prefix": "far",
+        }
+      }
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size={null}
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+  }
+  confirmLoading={false}
+  footer={
+    <Footer
+      okButtonProps={
+        Object {
+          "loading": undefined,
+        }
+      }
+    />
+  }
+  mask={true}
+  maskTransitionName="fade"
+  okType="primary"
+  transitionName="zoom"
+  visible={false}
+  width={520}
+>
+  Modal Test
+</Modal>
+`;

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading Component Test renders with loading icon 1`] = `
+<div
+  className="loading"
+/>
+`;
+
+exports[`Loading Component Test renders with tip 1`] = `
+<div
+  className="loading"
+/>
+`;

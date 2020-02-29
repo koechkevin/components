@@ -1,0 +1,20 @@
+@import '../../styles/global';
+
+.chatHeaderWrapper {
+  flex-wrap: nowrap;
+
+  .jobPosition {
+    &:global(.ant-typography) {
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
+
+  .chatStatusIcon {
+    svg {
+      width: 9px;
+      height: 9px;
+      font-size: 16px;
+    }
+  }
+}

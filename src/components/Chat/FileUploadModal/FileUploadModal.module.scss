@@ -1,0 +1,50 @@
+@import '../../../styles/global';
+
+.fileContainer {
+  background: $color-gray-lighter;
+  border-radius: 5px;
+  padding: 8px;
+
+  .content {
+    height: 60px;
+    padding: 16px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    border: 1px solid $color-primary-light;
+    background-color: $color-white;
+  }
+}
+
+.textArea {
+  margin-top: 16px;
+
+  :global {
+    textarea {
+      resize: none;
+      min-height: 80px;
+      color: rgba($color: $color-base-dark, $alpha: 1);
+    }
+
+    .ant-input:focus {
+      border-color: $color-primary;
+      outline: 0;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+
+    .ant-input:hover {
+      border-color: $color-primary;
+    }
+  }
+}
+
+.file {
+  .icon {
+    color: $color-primary;
+  }
+}
+
+.fileName {
+  @include ellipsis;
+  padding-left: 8px;
+}

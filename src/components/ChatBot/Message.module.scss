@@ -1,0 +1,19 @@
+@import '../../styles/message';
+
+
+.botMessage {
+  @extend .message;
+}
+
+.buttonGroup {
+  :global(.ant-btn:not(:last-child)) {
+    margin-right: 12px;
+  }
+
+  @include respond-to('xs-l') {
+    :global(.ant-btn) {
+      width: 100%;
+      margin-bottom: 12px;
+    }
+  }
+}

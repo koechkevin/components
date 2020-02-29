@@ -1,0 +1,22 @@
+@import "../../styles/global";
+
+.messageInputWrapper {
+  padding: 32px 32px 0;
+  position: fixed;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+
+  @include respond-to('sm') {
+    padding: 16px 16px 0;
+  }
+}
+
+.typing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}

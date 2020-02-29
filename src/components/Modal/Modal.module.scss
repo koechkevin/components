@@ -1,0 +1,88 @@
+@import '../../styles/global';
+
+.modal {
+  @include respond-to('xs-l') {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  :global {
+    .ant-modal-content {
+      border-radius: 8px;
+      box-shadow: 0 4px 12px 0 rgba($color: $color-black, $alpha: 0.08), 0 0 0 1px $color-lighter-dark;
+
+      @include respond-to('xs-l') {
+        @include display-flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    .ant-modal-header {
+      color: $color-base-dark;
+      border-color: $color-black-lighter;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .ant-modal-close {
+      width: 32px;
+      height: 32px;
+      top: 12px;
+      right: 16px;
+    }
+
+    .ant-modal-close-x {
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+    }
+
+    .ant-modal-title {
+      font-size: 16px;
+      text-align: left;
+      font-weight: bold;
+      line-height: 21px;
+      color: $color-base-dark;
+    }
+
+    .ant-modal-body {
+      padding: 32px;
+      overflow: auto;
+      font-size: 16px;
+
+      @include respond-to('xs-l') {
+        flex: 1;
+        @include display-flex;
+        @include justify-content(center);
+        flex-direction: column;
+      }
+    }
+
+    .ant-modal-footer {
+      border: none;
+      padding: 16px;
+      border-radius: 0 0 8px 8px;
+      background-color: $color-gray-light;
+
+      @include respond-to('xs-l') {
+        background-color: $color-white;
+
+        .ant-row-flex {
+          flex-direction: column-reverse;
+
+          button:last-child {
+            margin-left: 0;
+            margin-bottom: 16px;
+          }
+        }
+      }
+    }
+  }
+}

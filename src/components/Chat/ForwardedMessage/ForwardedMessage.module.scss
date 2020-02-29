@@ -1,0 +1,43 @@
+@import '../../../styles/global';
+
+@mixin row {
+  padding: 8px 0;
+  @include display-flex;
+  @include align-items(center);
+  font-size: 13px;
+}
+
+.root {
+  margin: 8px 0;
+  padding: 0 16px;
+  color: $color-base-dark;
+  border-left: 4px solid $color-primary;
+
+  .row {
+    @include row;
+  }
+
+  .avatar {
+    @include row;
+    padding-top: 0;
+  }
+
+  .author {
+    margin: 0 8px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .timestamp {
+    color: $color-text-gray;
+  }
+
+  .content {
+    @include row;
+    margin: -8px 0;
+  }
+}

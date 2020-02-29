@@ -1,0 +1,55 @@
+@import '../../styles/global';
+
+.checkBox {
+  :global(.ant-checkbox) {
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+  }
+
+  :global(.ant-checkbox-checked .ant-checkbox-inner) {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    box-shadow: none;
+  }
+
+  :global(.ant-checkbox-checked::after) {
+    border: none;
+  }
+
+  :global(.ant-checkbox-disabled.ant-checkbox-checked .ant-checkbox-inner) {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    box-shadow: none;
+    border: none;
+  }
+
+  :global(.ant-checkbox-disabled.ant-checkbox-checked .ant-checkbox-inner::after) {
+    border-color: $color-white;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    :global(.ant-checkbox-inner) {
+      border-color: $color-primary;
+    }
+  }
+
+  &.checkboxButton {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: $color-basic-light-gray;
+
+    :global(.ant-checkbox) {
+      top: 0;
+    }
+
+    :global(.ant-checkbox + span) {
+      padding-left: 16px;
+    }
+  }
+}

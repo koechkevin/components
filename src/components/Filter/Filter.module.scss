@@ -1,0 +1,81 @@
+@import '../../styles/global';
+
+.listFilter {
+  padding: 16px;
+}
+
+.search {
+  width: 278px;
+  margin-right: 16px;
+
+  &:global(.ant-input) {
+    border: none;
+    background-color: $color-gray-light;
+    box-shadow: none !important;
+
+    &:hover {
+      box-shadow: none;
+      background-color: $color-gray-light;
+    }
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 5px 8px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  border-radius: 4px;
+  color: $color-base-dark-gray;
+  background-color: $color-button-gray;
+
+  &.active,
+  &:hover {
+    color: $color-primary;
+    background-color: $color-primary-light;
+  }
+}
+
+.selected {
+  @extend .button;
+  color: $color-primary;
+  width: max-content;
+  background-color: $color-primary-light;
+  margin-left: 8px;
+  margin-right: 16px;
+}
+
+.clearBtn {
+  @extend .button;
+  color: $color-primary;
+  margin-left: 16px;
+}
+
+.disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+  pointer-events: none;
+  color: $color-base-dark-gray;
+}
+
+.overlay {
+  padding-top: 20px;
+  width: 224px;
+  margin-top: 10px;
+}
+
+.overlayItem {
+  padding: 8px 8px 8px 20px;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-primary;
+    background-color: $color-primary-light;
+
+    span {
+      color: $color-primary;
+    }
+  }
+}

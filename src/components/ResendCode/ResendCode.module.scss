@@ -1,0 +1,46 @@
+@import '../../styles/global';
+
+.modalContent {
+  :global {
+    .ant-modal-content {
+      width: 480px;
+      font-size: 16px;
+      @include respond-to('xs-l') {
+        width: 90%;
+        margin: 0 16px;
+        height: 347px;
+        margin: auto;
+      }
+    }
+
+    .ant-modal-footer {
+      background-color: $color-basic-light-gray;
+      height: 72px;
+    }
+
+    .ant-typography {
+      color: $color-base-dark-gray;
+    }
+  }
+}
+
+.formDetails {
+  margin: 8px 0 32px;
+
+  strong {
+    font-size: 16px;
+  }
+}
+
+.formOptions {
+  margin: 16px 0 16px;
+}
+
+.button {
+  width: 100px;
+  font-weight: 600;
+}
+
+.text {
+  font-size: 16px;
+}

@@ -1,0 +1,21 @@
+image: node:12.16.1 # debian stretch
+options:
+  max-time: 10
+
+pipelines:
+  default:
+    - step:
+        name: Install dependencies, run jest unit tests
+        caches:
+          - node
+          - npm
+          - yarn
+        script:
+          - echo "//registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}" >> $HOME/.npmrc
+          - yarn install
+          - yarn run jest
+
+definitions:
+  caches:
+    npm: $HOME/.npm
+    yarn: /usr/local/share/.cache/yarn

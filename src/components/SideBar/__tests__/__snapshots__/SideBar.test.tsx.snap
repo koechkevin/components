@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideBar Component Test renders dark theme with theme value "dark" 1`] = `
+<Sider
+  className="sideBar "
+  collapsedWidth={0}
+  collapsible={true}
+  theme="dark"
+  trigger={null}
+/>
+`;
+
+exports[`SideBar Component Test renders light theme with theme value "light" 1`] = `
+<Sider
+  className="sideBar "
+  collapsedWidth={0}
+  collapsible={true}
+  theme="light"
+  trigger={null}
+/>
+`;
+
+exports[`SideBar Component Test renders side bar with prop width 1`] = `
+<Sider
+  className="sideBar "
+  collapsedWidth={0}
+  collapsible={true}
+  trigger={null}
+  width={200}
+>
+  Button Test
+</Sider>
+`;
+
+exports[`SideBar Component Test renders with child element 1`] = `
+<Sider
+  className="sideBar "
+  collapsedWidth={0}
+  collapsible={true}
+  trigger={null}
+>
+  SideBar Test
+</Sider>
+`;

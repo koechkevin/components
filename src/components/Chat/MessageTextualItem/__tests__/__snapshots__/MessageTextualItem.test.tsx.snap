@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for MessageItemTextualItem should render textual item without crushing 1`] = `ReactWrapper {}`;

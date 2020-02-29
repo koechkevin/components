@@ -1,0 +1,249 @@
+// VARIABLES
+// ==========================================================================
+// COLOR VARIABLES
+$color-white: #fff;
+$color-black: #000;
+$color-black-light: #272727;
+$color-black-lighter: #ebebeb;
+$color-dark-lighter: #2c2c2e;
+
+$color-primary: #0050c8;
+$color-primary-light: #dfe9f8;
+$color-primary-dark: #003c96;
+
+$color-success: #39c049;
+$color-success-secondary: #2b9037;
+$color-success-light: #e6f7e8;
+
+$color-error: #c81400;
+$color-error-secondary: #ff4b33;
+$color-error-hover-secondary: #e6432e;
+$color-red-secondary: #fa2d19;
+$color-error-hover: #960f00;
+$color-light-red: #f8e2df;
+
+// ------------------------------------------------ Base Dark
+$color-base-dark: #1d1d1d;
+$color-base-darker: #161616;
+$color-side-bar-dark: #282828;
+$color-base-dark-gray: #565656;
+$color-base-gray-dark: #6b6b6b;
+$color-base-gray-darker: #eaeaea;
+$color-base-gray-light: #b9b9b9;
+$color-base-gray: #c7c7c7;
+$color-dark-gray: #2e2f30;
+$color-base-gray-lighter: #cbcbcb;
+$color-button-gray: #eaeaea;
+$color-grey-light: #979797;
+$color-lighter-dark: #e4e4e4;
+$color-grey-lighter: #d2d2d2;
+
+$color-gray-regular: #ebebeb;
+$color-gray-dark: #d0d0d0;
+$color-gray-darker: #606060;
+$color-blue-gray: #f8fbfd;
+$color-darker-blue-gray: #f2f8fd;
+$color-text-gray: #707070;
+$color-basic-light-gray: #f3f3f3;
+$color-lighter-gray: #d8d8d8;
+$color-light-gray: #d9d9d9;
+
+$color-buttercup: #fb6d77;
+$color-avatar-orange: #f56a00;
+$color-light-orange: #ecb22e;
+$color-avatar-light: #fde3cf;
+
+$color-font-dark: #555;
+$color-font-darker: #333;
+
+$color-gray-light: #f8f8f8;
+$color-gray-lighter: #fafafa;
+
+$color-border-gray: #cdcfd3;
+$color-hover-bg: #e1e9f7;
+$color-danger-bg: #f4e3e0;
+$color-hex-gray-primary: #545454;
+$color-hex-gray-light: #7b7b7b;
+
+// RADIO Colors
+$color-purple-radio: #9c43d6;
+$color-purple-radio-light: #eedff8;
+$color-gold-radio: #d7a84b;
+$color-gold-radio-light: #faeccb;
+$color-radio-green: #2b7f35;
+$color-green-success: #009426;
+$color-radio-green-light: #dfece1;
+
+// RESPONSIVE
+$breakpoints: (
+  'lg-large': (
+    max-width: 1440px,
+  ),
+  'lg-medium': (
+    max-width: 1320px,
+  ),
+  'lg-small': (
+    max-width: 1280px,
+  ),
+  'lg': (
+    max-width: 1200px,
+  ),
+  'md-large': (
+    max-width: 1024px,
+  ),
+  'md': (
+    max-width: 992px,
+  ),
+  'sm': (
+    max-width: 768px,
+  ),
+  'xs': (
+    max-width: 320px,
+  ),
+  'xs-m': (
+    max-width: 375px,
+  ),
+  'xs-l': (
+    max-width: 575px,
+  ),
+  'xs-l-landscape': (
+    min-width: 320px,
+  )
+  and
+  (
+    max-width: 575px,
+  )
+  and
+  (
+    orientation: landscape,
+  ),
+  'min-sm-height': (
+    min-height: 1024px,
+  ),
+  'min-sm-medium': (
+    min-width: 575px,
+  ),
+  'min-sm': (
+    min-width: 769px,
+  ),
+  'min-sm-large': (
+    min-width: 850px,
+  ),
+  'min-md': (
+    min-width: 992px,
+  ),
+  'min-md-large': (
+    min-width: 1024px,
+  ),
+  'min-md-large-portrait': (
+    min-width: 768px,
+  )
+  and
+  (
+    max-width: 1024px,
+  )
+  and
+  (
+    orientation: portrait,
+  ),
+  'min-md-large-landscape': (
+    min-width: 768px,
+  )
+  and
+  (
+    max-width: 1024px,
+  )
+  and
+  (
+    orientation: landscape,
+  ),
+  'min-lg-small': (
+    min-width: 1170px,
+  ),
+  'min-lg': (
+    min-width: 1200px,
+  ),
+  'min-lg-medium-small': (
+    min-width: 1300px,
+  ),
+  'min-lg-medium': (
+    min-width: 1320px,
+  ),
+  'min-lg-large': (
+    min-width: 1440px,
+  ),
+);
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+    +'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+// MIXINS
+@mixin display-flex() {
+  display: flex;
+}
+
+@mixin align-items($position) {
+  align-items: $position;
+}
+
+@mixin justify-content($position) {
+  justify-content: $position;
+}
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  @include translateY(-50%);
+}
+
+@mixin flex-center {
+  @include display-flex();
+  @include align-items(center);
+  @include justify-content(center);
+}
+
+@mixin flex-center-vertical {
+  @include display-flex();
+  @include align-items(center);
+}
+
+@mixin separator {
+  content: '';
+  position: absolute;
+  top: 0;
+  @include size(1px, 100%);
+  background-color: $color-base-gray-dark;
+}
+
+@mixin background-cover {
+  @include background-size(cover);
+  background-position: center;
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin no-padding {
+  padding: 0;
+}
+
+@mixin link {
+  font-size: 13px;
+  color: $color-primary;
+  font-weight: 600;
+}

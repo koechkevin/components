@@ -1,0 +1,1 @@
+export type UploadFileStatus = 'error' | 'success' | 'done' | 'uploading' | 'removed';

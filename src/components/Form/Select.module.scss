@@ -1,0 +1,284 @@
+@import '../../styles/_global';
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.suffix {
+  margin-top: -8px;
+}
+
+.dropdown {
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px 0 rgba($color: $color-black, $alpha: 0.08), 0 0 0 1px rgba($color: $color-black, $alpha: 0.08);
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+
+  * {
+    scrollbar-width: none;
+  }
+
+  :global(.ant-select-dropdown-menu) {
+    padding: 8px 0;
+    border-radius: 8px;
+  }
+
+  :global(.ant-select-dropdown-menu-item:hover:not(.ant-select-dropdown-menu-item-disabled)) {
+    background-color: $color-primary-light;
+  }
+
+  :global(.ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled)) {
+    background: $color-primary-light;
+  }
+
+  :global(.ant-select-dropdown-menu-item) {
+    height: 48px;
+    padding: 8px 16px;
+    border-radius: 0;
+    color: $color-base-dark;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+  }
+
+  :global(.ant-select-focused .ant-select-selection) {
+    box-shadow: none;
+  }
+}
+
+.input {
+  font-size: 16px;
+
+  &:hover {
+    :global(.ant-select-selection) {
+      border-bottom-color: transparent;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      background-color: $color-basic-light-gray;
+    }
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  &:focus-within,
+  &.hasFilled {
+    :global(.ant-form-item-label) {
+      text-align: left;
+      top: 4px;
+      padding-left: 16px;
+
+      & > label {
+        font-size: 12px;
+        position: relative;
+      }
+    }
+
+    :global(.ant-select-selection-selected-value) {
+      position: absolute;
+      padding-left: 16px;
+      left: -5px;
+    }
+
+    :global(.ant-select-selection) {
+      box-shadow: none;
+    }
+
+    :global(.ant-select-selection--single) {
+      padding-top: 8px;
+    }
+
+    &:focus-within {
+      :global(.ant-select-selection) {
+        border-bottom: 2px solid $color-primary;
+      }
+    }
+
+    &:hover,
+    &:focus-within {
+      :global(.ant-select-selection) {
+        background: $color-basic-light-gray;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+      }
+    }
+  }
+
+  &.error,
+  &.error:hover,
+  .error:focus-within {
+    :global(.ant-select-selection) {
+      border-bottom: 2px solid $color-error-secondary !important;
+      border-bottom-left-radius: 2px !important;
+      border-bottom-right-radius: 2px !important;
+    }
+    svg {
+      color: $color-base-gray;
+    }
+  }
+
+  &.success {
+    :global(.ant-select-selection) {
+      border-bottom: 2px solid $color-success;
+    }
+
+    :global(.ant-form-explain) {
+      color: $color-success;
+    }
+  }
+
+  :global(.ant-select) {
+    width: 100%;
+  }
+
+  :global(.ant-select-selection--single) {
+    cursor: pointer;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+  }
+
+  :global(.ant-select-selection) {
+    background-color: transparent;
+    border-bottom: 1px solid $color-base-gray;
+    &:focus,
+    &:focus-within {
+      outline: 0;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border-color: $color-primary;
+      border-width: 2px;
+      background-color: $color-gray-light;
+    }
+
+    &:hover {
+      background-color: $color-basic-light-gray;
+      box-shadow: none;
+    }
+  }
+
+  :global(.ant-form-item-label) {
+    pointer-events: none;
+    position: absolute;
+    top: 16px;
+    padding-left: 16px;
+    line-height: 20px;
+    color: $color-base-dark-gray;
+    max-width: max-content;
+    overflow: initial;
+    z-index: 2;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
+      background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), padding 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+    & > label {
+      color: $color-base-dark-gray;
+    }
+  }
+
+  label::after {
+    content: '' !important;
+  }
+
+  :global(.ant-select-selection-selected-value) {
+    margin-top: 8px;
+    margin-left: -3px;
+    padding-left: 5px;
+    font-size: 16px;
+  }
+
+  :global(.ant-select-selection__rendered) {
+    line-height: 40px;
+    margin-left: 8px;
+  }
+
+  &::-webkit-input-placeholder {
+    display: none;
+  }
+
+  :global(.ant-select-search--inline) {
+    margin: 4px 0 0 4px;
+    padding-left: 5px;
+    cursor: pointer;
+  }
+
+  :global(.ant-select-selection) {
+    width: 100%;
+    border-radius: 8px;
+    outline: none;
+    height: 56px;
+    padding: 8px 4px 0 0;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+
+    &:hover {
+      background-color: $color-basic-light-gray;
+      border-color: transparent;
+    }
+  }
+
+  &.hasFilled {
+    &:hover:not(:focus-within) {
+      :global(.ant-select-selection) {
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+    }
+    &:focus-within {
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+  }
+}
+
+.nativeSelect {
+  position: relative;
+  label {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 12px;
+    color: $color-base-dark-gray;
+  }
+
+  &.empty {
+    label {
+      font-size: 16px;
+      top: 16px;
+    }
+  }
+  select {
+    border: none;
+    background: transparent;
+    width: 100%;
+    outline: none !important;
+    height: 56px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 8px;
+    border-bottom: 1px solid $color-base-gray;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    cursor: pointer;
+    padding: 16px 16px 0 16px;
+    color: $color-base-dark;
+    font-size: 16px;
+
+    &:hover {
+      background: $color-basic-light-gray;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-color: transparent;
+    }
+
+    &:active {
+      border-bottom: 2px solid $color-primary;
+    }
+    &::-ms-expand {
+      display: none;
+    }
+  }
+}

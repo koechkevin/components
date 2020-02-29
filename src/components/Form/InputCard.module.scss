@@ -1,0 +1,31 @@
+@import '../../styles/global';
+
+.inputCard {
+  padding: 16px;
+  position: relative;
+  margin-bottom: 16px;
+  min-height: 50px;
+  border-radius: 8px;
+  border: 1px solid $color-lighter-dark;
+  margin-bottom: 0px;
+
+  @include respond-to('xs-l') {
+    padding: 16px;
+  }
+
+  .header {
+    padding: 8px;
+    margin-bottom: 16px;
+    flex-wrap: nowrap;
+    padding-left: 16px;
+    overflow: hidden;
+
+    .title {
+      flex: 1 auto;
+      font-size: 16px;
+      font-weight: bold;
+      color: $color-base-dark;
+      @include ellipsis;
+    }
+  }
+}

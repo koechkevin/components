@@ -1,0 +1,11 @@
+@import '../../styles/global';
+
+.avatar {
+  &:global(.ant-avatar-square) {
+    border-radius: 8px;
+  }
+
+  &:global(.ant-avatar img) {
+    background-color: $color-basic-light-gray;
+  }
+}

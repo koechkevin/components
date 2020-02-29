@@ -1,0 +1,23 @@
+@import "../../styles/global";
+
+.tooltip {
+  :global(.ant-tooltip-inner) {
+    font-size: 12px;
+    background-color: $color-base-dark;
+  }
+}
+
+.light {
+  :global {
+    .ant-tooltip-inner {
+      font-size: 12px;
+      color: $color-base-dark;
+      background-color: $color-white;
+      box-shadow: 0 2px 4px rgba($color: $color-black, $alpha: 0.16);
+    }
+
+    .ant-tooltip-arrow::before {
+      background-color: $color-white;
+    }
+  }
+}
